@@ -6,9 +6,9 @@ DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 TEMP="$(mktemp -d)"
 
 cleanup() {
-        if [[ -d $TEMP ]]; then
-                rm -rf -- "$TEMP"
-        fi
+	if [[ -d $TEMP ]]; then
+		rm -rf -- "$TEMP"
+	fi
 }
 
 trap cleanup EXIT
